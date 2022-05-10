@@ -31,5 +31,5 @@ services:
   redis: 
     image: redis
 
-#volumes:
-#  mongo-db:
+volumes:
+  mongo-db:
