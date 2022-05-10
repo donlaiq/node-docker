@@ -23,7 +23,8 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=sanjeev
       - MONGO_INITDB_ROOT_PASSWORD=mypassword
     volumes:
-      - source: mongo-db
+      - type: volume
+        source: mongo-db
         target: /data/db
       #- mongo-db:/data/db
 
