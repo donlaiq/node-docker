@@ -6,8 +6,6 @@ services:
       - "3000:80"
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
-    #volumes_from:
-    #  - node-app
 
   node-app:
     build: .
@@ -23,9 +21,6 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=sanjeev
       - MONGO_INITDB_ROOT_PASSWORD=mypassword
     volumes:
-      #- type: volume
-      #  source: mongo-db
-      #  target: /data/db
       - mongo-db:/data/db
 
   redis: 
