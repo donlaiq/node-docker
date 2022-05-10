@@ -10,7 +10,7 @@ services:
     #  - node-app
 
   node-app:
-    #build: .
+    build: .
     image: donlaiq/node-app
     environment: 
       - PORT=3000
